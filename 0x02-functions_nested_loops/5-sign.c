@@ -1,9 +1,9 @@
 #include "main.h"
-
 /**
- * main - Program that prints the sign of a number.
+ * print_sign - Prints the sign of a number.
+ * @n: The number to check.
  *
- * Return: Always 0.
+ * Return: -1 if n is negative, 0 if n is zero, 1 if n is positive.
  */
 int print_sign(int n)
 {
