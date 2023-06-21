@@ -21,7 +21,7 @@ else
 _putchar('0' + result / 10);
 _putchar('0' + result % 10);
 }
- 
+
 if (col != 9)
 {
 _putchar(',');
@@ -31,4 +31,3 @@ _putchar(' ');
 _putchar('\n');
 }
 }
-
