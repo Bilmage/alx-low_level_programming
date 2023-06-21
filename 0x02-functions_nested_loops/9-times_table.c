@@ -12,12 +12,19 @@ for (row = 0; row <= 9; row++)
 for (col = 0; col <= 9; col++)
 {
 int result = row * col;
+
 if (result <= 9)
 {
+if (col != 0)
+{
+_putchar(' ');
+_putchar(' ');
+}
 _putchar('0' + result);
 }
 else
 {
+_putchar(' ');
 _putchar('0' + result / 10);
 _putchar('0' + result % 10);
 }
