@@ -11,37 +11,31 @@
  * last day of the year.
  */
 
+#include <stdio.h>
+
 void print_remaining_days(int month, int day, int year)
 {
-int is_leap_year = 0;
-
-if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+if ((year % 100 == 0 && year % 400 == 0) || (year % 4 == 0))
 {
-is_leap_year = 1;
+if (month > 2 && day >= 60)
+{
+day++;
 }
-
-int remaining_days;
-
-if (month == 2 && day == 29 && is_leap_year)
-{
-remaining_days = 366 - day;
+printf("Day of the year: %d\n", day);
+printf("Remaining days: %d\n", 366 - day);
 }
 else
 {
-int day_of_month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-remaining_days = 365 - day;
-
-if (is_leap_year)
+if (month == 2 && day == 60)
 {
-day_of_month[2] = 29;
+printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
 }
-
-for (int i = month + 1; i <= 12; i++)
+else
 {
-remaining_days += day_of_month[i];
+printf("Day of the year: %d\n", day);
+printf("Remaining days: %d\n", 365 - day);
+}
 }
 }
 
-printf("There are %d days remaining in the year.\n", remaining_days);
-}
 
