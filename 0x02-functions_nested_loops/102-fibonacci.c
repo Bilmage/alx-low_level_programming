@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
@@ -19,5 +24,5 @@ printf("%d ", fib[i]);
 }
 printf("\n");
 
-return 0;
+return (0);
 }
