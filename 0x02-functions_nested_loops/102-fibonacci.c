@@ -24,7 +24,7 @@ for (i = 0; i < 49; i++)
 {
 printf("%d, ", fib[i]);
 }
-printf("%d\n", fib[49]); // Print the last Fibonacci number without the comma
+printf("%d\n", fib[49]); 
 
-return 0;
+return (0);
 }
