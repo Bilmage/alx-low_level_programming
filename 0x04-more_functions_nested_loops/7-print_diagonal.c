@@ -1,4 +1,10 @@
 #include <stdio.h>
+/**
+ * _putchar - Custom putchar function
+ * @c: Character to be printed
+ *
+ * Return: On success, return the character. On error, return EOF.
+ */
 
 void _putchar(char c)
 {
