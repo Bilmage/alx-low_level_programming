@@ -9,7 +9,6 @@
  *
  * Return: 0 (indicating successful execution of the program)
  */
-
 int main(void)
 {
 int i;
@@ -34,5 +33,5 @@ printf("%d\n", i);
 }
 }
 
-return (0);
+return 0;
 }
