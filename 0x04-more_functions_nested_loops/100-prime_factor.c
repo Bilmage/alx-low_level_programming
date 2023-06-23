@@ -2,41 +2,27 @@
 #include <math.h>
 
 /**
- * largestPrimeFactor - Finds the largest prime factor of a number.
- * @number: The number to find the largest prime factor of.
- *
- * Return: The largest prime factor of the given number.
- */
-long long largestPrimeFactor(long long number)
-{
-long long i;
-
-while (number % 2 == 0)
-number /= 2;
-
-for (i = 3; i <= sqrt(number); i += 2)
-{
-while (number % i == 0)
-number /= i;
-}
-
-if (number > 2)
-return (number);
-
-return (i - 2);
-}
-
-/**
  * main - Entry point of the program.
+ *
+ * Description: Finds the largest prime factor of a number and prints it.
  *
  * Return: 0 on success.
  */
 int main(void)
 {
+long long x, maxf;
 long long number = 612852475143;
-long long largestFactor = largestPrimeFactor(number);
+double square = sqrt(number);
 
-printf("%lld\n", largestFactor);
+for (x = 1; x <= square; x++)
+{
+if (number % x == 0)
+{
+maxf = number / x;
+}
+}
+
+printf("%lld\n", maxf);
 
 return (0);
 }
