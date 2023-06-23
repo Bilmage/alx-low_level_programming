@@ -1,18 +1,7 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * _putchar - Custom putchar function
- * @c: Character to be printed
- *
- * Return: On success, return the character. On error, return EOF.
- */
-void _putchar(char c)
-{
-putchar(c);
-}
-
-/**
- * print_diagonal - Prints a diagonal line on the terminal
+ * print_diagonal - Draws a diagonal line on the terminal
  * @n: Number of times the character '\' should be printed
  */
 void print_diagonal(int n)
@@ -32,16 +21,12 @@ _putchar(' ');
 _putchar('\\');
 _putchar('\n');
 }
-}
 
-/**
- * main - Entry point of the program
- *
- * Return: 0 on successful execution
- */
-int main(void)
+
+for (int i = 0; i < n; i++)
 {
-print_diagonal(5);  /* Example usage */
-return 0;
+_putchar(' ');
 }
-
+_putchar('$');
+_putchar('\n');
+}
